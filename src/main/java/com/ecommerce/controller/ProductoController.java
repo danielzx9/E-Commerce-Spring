@@ -88,7 +88,7 @@ public class ProductoController {
 			p = productoService.get(producto.getId()).get();
 			
 			//eliminar cuando no sea la imagen default
-			if (p.getImagem().equals("default.jpg")) {
+			if (!p.getImagem().equals("default.jpg")) {
 				upload.deleteImage(p.getImagem());
 				
 			}
@@ -110,7 +110,7 @@ public class ProductoController {
 		p = productoService.get(id).get();
 		
 		//eliminar cuando no sea la imagen default
-		if (p.getImagem().equals("default.jpg")) {
+		if (!p.getImagem().equals("default.jpg")) {
 			upload.deleteImage(p.getImagem());
 			
 		}
